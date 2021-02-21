@@ -1,0 +1,6 @@
+{
+  "bsbolt_index.name": "Homo_sapiens",
+  "bsbolt_index.reduced_representation": false,
+  "bsbolt_index.reference_fasta": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "bsbolt_index.destination": "/data/indexes/bsbolt/ensembl_103/"
+}
