@@ -1,0 +1,5 @@
+{
+  "bitmapper_index.index_name": "Homo_sapiens",
+  "bitmapper_index.genome": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "bitmapper_index.destination": "/data/indexes/bitmapper/ensembl_103/"
+}
