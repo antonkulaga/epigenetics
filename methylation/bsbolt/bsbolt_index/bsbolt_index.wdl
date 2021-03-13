@@ -2,7 +2,7 @@ version development
 workflow bsbolt_index {
     input {
         File reference_fasta
-        String index_name
+        String name
         String destination
         File? mappable_regions
         Boolean ignore_alt_contigs = false
@@ -15,7 +15,7 @@ workflow bsbolt_index {
     call index{
         input:
         reference_fasta = reference_fasta,
-        name = index_name,
+        name = name,
         mappable_regions = mappable_regions,
         ignore_alt_contigs = ignore_alt_contigs,
         reduced_representation = reduced_representation,
@@ -30,6 +30,7 @@ workflow bsbolt_index {
             destination = destination
     }
 }
+
 task index {
     input {
         File reference_fasta
@@ -46,6 +47,10 @@ task index {
         ~{if(reduced_representation) then "-rrbs " + "-rrbs-lower "+ rrbs_lower + " -rrbs-upper" + rrbs_upper + " -rrbs-cut-format "+rbbs_cut_format else ""} \
         ~{"-MR " + mappable_regions} ~{if(ignore_alt_contigs) then "-IA" else ""}
     }
+    runtime {
+        docker: "quay.io/comp-bio-aging/bsbolt:latest"
+    }
+
     output {
         File out = name
     }
