@@ -1,0 +1,10 @@
+{
+  "bs_map.run": "SRR948855",
+  "bs_map.output_folder": "/data/samples/bs-seq/EMBED/GSM2481447",
+  "bs_map.layout": "SINGLE",
+  "bs_map.genome_index": "/data/indexes/bitmapper/ensembl_103/Homo_sapiens",
+  "bs_map.genome": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "bs_map.extract_threads": 4,
+  "bs_map.copy_cleaned": true,
+  "bs_map.map_threads": 8
+}

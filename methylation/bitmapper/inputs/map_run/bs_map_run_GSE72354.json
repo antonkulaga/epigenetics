@@ -1,4 +1,3 @@
-GSE72354
 {
   "bs_map.run": "SRR948855",
   "bs_map.output_folder": "/data/samples/bs-seq/SRR948855",
@@ -9,5 +8,3 @@ GSE72354
   "bs_map.copy_cleaned": true,
   "bs_map.map_threads": 8
 }
-#GSE72354
-#GSE84018

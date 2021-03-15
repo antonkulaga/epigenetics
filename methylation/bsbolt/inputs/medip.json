@@ -1,0 +1,7 @@
+{
+  "bsbolt_map_run.destination": "/data/samples/EMBED/GSE54370/GSM1313979/PRJNA236349/SRX448174/SRR1142023",
+  "bsbolt_map_run.name": "GSM1313979_bsbolt",
+  "bsbolt_map_run.read_group": "GSM1313979",
+  "bsbolt_map_run.reads": [ "/data/samples/EMBED/GSE54370/GSM1313979/PRJNA236349/SRX448174/SRR1142023/reads/SRR1142023.fastq_cleaned.fastq.gz"],
+  "bsbolt_map_run.index": "/data/indexes/bsbolt/ensembl_103/Homo_sapiens"
+}

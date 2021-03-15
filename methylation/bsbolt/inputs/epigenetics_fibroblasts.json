@@ -1,0 +1,7 @@
+{
+  "bsbolt_map_run.destination": "/data/epigenetics-lab/WGBS/Andrey/Fibroblast",
+  "bsbolt_map_run.name": "Andrey_fibroblast_bsbolt",
+  "bsbolt_map_run.read_group": "GSM2481447",
+  "bsbolt_map_run.reads": [ "/data/epigenetics-lab/WGBS/Andrey/Fibroblast/Andrey_FB.R1.fq.gz", "/data/epigenetics-lab/WGBS/Andrey/Fibroblast/Andrey_FB.R2.fq.gz"],
+  "bsbolt_map_run.index": "/data/indexes/bsbolt/ensembl_103/Homo_sapiens"
+}

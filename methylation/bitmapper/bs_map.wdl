@@ -146,7 +146,7 @@ task picard_readgroups_sort{
     }
 
     runtime {
-        docker: "quay.io/biocontainers/picard@sha256:bf3459f4b0a9ff5e8093b204bb74e5d73da2f850c2b56e1abe2e7761abb9263e" #2.20.6--0
+        docker:  "quay.io/biocontainers/picard:2.25.0--0"
     }
 
     output {
@@ -192,7 +192,7 @@ task picard_mark_duplicates {
     }
 
     runtime {
-        docker: "quay.io/biocontainers/picard@sha256:bf3459f4b0a9ff5e8093b204bb74e5d73da2f850c2b56e1abe2e7761abb9263e" #2.20.6--0
+        docker: "quay.io/biocontainers/picard:2.25.0--0"
     }
 }
 
@@ -215,7 +215,7 @@ task methyldackel {
 
 
     runtime {
-        docker: "quay.io/biocontainers/methyldackel@sha256:579532ddf7ec19a5210854a95a949d35dbde232b0a0c10129cc36b6ccea1558a" #0.4.0--hc0aa232_0
+        docker: "quay.io/biocontainers/methyldackel:0.5.2--h7435645_0"
     }
 
     output {
