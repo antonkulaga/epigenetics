@@ -23,8 +23,8 @@ workflow chip_seq {
         Boolean aspera_download = true
         Boolean skip_technical = true
         Boolean original_names = false
+        Boolean deep_folder_structure = false
         String sequence_aligner = "minimap2"
-        Boolean deep_folder_structure = true
         Boolean markdup = false
         Int compression = 9
     }
@@ -48,7 +48,8 @@ workflow chip_seq {
             original_names = original_names,
             sequence_aligner = sequence_aligner,
             markdup = markdup,
-            compression = compression
+            compression = compression,
+            deep_folder_structure =  deep_folder_structure
     }
 
 
@@ -71,7 +72,8 @@ workflow chip_seq {
             original_names = original_names,
             sequence_aligner = sequence_aligner,
             markdup = markdup,
-            compression = compression
+            compression = compression,
+            deep_folder_structure = deep_folder_structure
     }
 
     scatter(control in align_controls.out){
@@ -90,7 +92,7 @@ workflow chip_seq {
         input: files = treatments_aligned, destination = destination + "/" +"treatments_aligned"
     }
 
-    call macs.callpeak as call_narrow {
+    call macs.macs2 as call_narrow {
         input: control = copy_control_aligned.out,
             treatment = copy_treatment_aligned.out,
             title = title,
@@ -100,7 +102,7 @@ workflow chip_seq {
             out_dir = "narrow_peaks"
     }
 
-    call macs.callpeak as call_broad {
+    call macs.macs2 as call_broad {
         input:
             destination = destination,
             control = copy_control_aligned.out,
@@ -111,13 +113,9 @@ workflow chip_seq {
             out_dir = "broad_peaks"
     }
 
-    call files.copy as copy_results {
-        input: destination = destination, files = [call_narrow.out, call_broad.out]
-    }
-
     output {
-       File narrow = copy_results.out[0]
-       File broad = copy_results.out[1]
+       File narrow = call_narrow.out
+       File broad = call_broad.out
     }
 }
 
