@@ -2,13 +2,13 @@ version development
 # production configuration
 import "https://raw.githubusercontent.com/antonkulaga/bioworkflows/main/common/files.wdl" as files
 import "https://raw.githubusercontent.com/antonkulaga/bioworkflows/main/align/align_runs.wdl" as runs_aligner
+import "https://raw.githubusercontent.com/antonkulaga/epigenetics/main/chip-seq/macs2.wdl" as macs
 
 workflow chip_seq {
     input {
         Array[String] treatments
         Array[String] controls
         String format = "AUTO"
-        Boolean broad
         String destination
         String title
         File reference
@@ -90,54 +90,34 @@ workflow chip_seq {
         input: files = treatments_aligned, destination = destination + "/" +"treatments_aligned"
     }
 
-
-    call callpeak {
+    call macs.callpeak as call_narrow {
         input: control = copy_control_aligned.out,
             treatment = copy_treatment_aligned.out,
-            name = title,
+            title = title,
             format = format,
-            broad = broad
+            broad = false,
+            destination = destination,
+            out_dir = "narrow_peaks"
+    }
+
+    call macs.callpeak as call_broad {
+        input:
+            destination = destination,
+            control = copy_control_aligned.out,
+            treatment = copy_treatment_aligned.out,
+            title = title,
+            format = format,
+            broad = true,
+            out_dir = "broad_peaks"
     }
 
     call files.copy as copy_results {
-        input: destination = destination, files = [callpeak.out]
+        input: destination = destination, files = [call_narrow.out, call_broad.out]
     }
 
     output {
-       File out = copy_results.out[0]
+       File narrow = copy_results.out[0]
+       File broad = copy_results.out[1]
     }
 }
-
-task callpeak {
-    input{
-        Array[File] treatment
-        Array[File] control
-        String outDir = "result"
-        String name
-        String format = "AUTO"
-        Boolean broad = true
-    }
-
-    String fixed_name = sub(name, " ", "_")
-
-    command {
-        macs2 callpeak \
-        --outdir ~{outDir} \
-        --treatment ~{sep=' ' treatment} \
-        --control ~{sep=' ' control} \
-        --name ~{fixed_name} \
-        --format ~{format} ~{if(broad) then "--broad" else ""}
-    }
-
-    runtime {
-        docker: "quay.io/biocontainers/macs2:2.2.7.1--py39h38f01e4_2"
-        maxRetries: 2
-    }
-
-    output {
-        File out   = outDir
-    }
-
-}
-
 

@@ -9,13 +9,16 @@ workflow macs2 {
         String title
         Boolean broad = false
         String format = "AUTO"
+        String out_dir = "results"
     }
+
     call callpeak {
         input: control = control,
             treatment =treatment,
             name = title,
             format = format,
-            broad = broad
+            broad = broad,
+            out_dir = out_dir
     }
 
 
@@ -28,12 +31,11 @@ workflow macs2 {
     }
 }
 
-
 task callpeak {
     input{
         Array[File] treatment
         Array[File] control
-        String outDir = "result"
+        String out_dir
         String name
         String format = "AUTO"
         Boolean broad = true
@@ -43,7 +45,7 @@ task callpeak {
 
     command {
         macs2 callpeak \
-        --outdir ~{outDir} \
+        --outdir ~{out_dir} \
         --treatment ~{sep=' ' treatment} \
         --control ~{sep=' ' control} \
         --name ~{fixed_name} \
@@ -56,7 +58,7 @@ task callpeak {
     }
 
     output {
-        File out   = outDir
+        File out   = out_dir
     }
 
 }
