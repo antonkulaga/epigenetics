@@ -1,0 +1,9 @@
+{
+  "macs2.destination": "String",
+  "macs2.control": "Array[File]",
+  "macs2.treatment": "Array[File]",
+  "macs2.format": "String (optional, default = \"AUTO\")",
+  "macs2.broad": "Boolean (optional, default = false)",
+  "macs2.title": "String",
+  "macs2.callpeak.outDir": "String (optional, default = \"result\")"
+}

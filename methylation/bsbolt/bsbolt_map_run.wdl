@@ -38,8 +38,7 @@ task align {
         String read_group
     }
     command {
-        bsbolt Align -F1 ~{reads[0]} ~{if(length(reads)>1) then "-F2 " + reads[1] else ""} -DB ~{index} -O ~{name} -OT ~{bam_threads} -R '@RG ID:~{read_group}' -p \
-      -t ~{bwa_threads}
+        bsbolt Align -F1 ~{reads[0]} ~{if(length(reads)>1) then "-F2 " + reads[1] else " -p "} -DB ~{index} -O ~{name} -OT ~{bam_threads} -R '@RG ID:~{read_group}' -t ~{bwa_threads}
     }
 
     runtime {

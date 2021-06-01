@@ -1,0 +1,18 @@
+{
+  "chip_seq.treatments": ["SRR5241280","SRR5241279","SRR5241276","SRR5241275","SRR5241270","SRR5241268","SRR5241255","SRR5241249","SRR5241248","SRR5241246","SRR5241245","SRR5241242","SRR5241237","SRR5241230","SRR5241229","SRR5241228","SRR5241220","SRR5241217","SRR5241213","SRR5241212","SRR5241208","SRR5241206"],
+  "chip_seq.controls": ["SRR5241278","SRR5241277","SRR5241274","SRR5241273","SRR5241272","SRR5241271","SRR5241269","SRR5241267","SRR5241266","SRR5241265","SRR5241264","SRR5241263","SRR5241262","SRR5241261","SRR5241260","SRR5241259","SRR5241258","SRR5241257","SRR5241256","SRR5241254","SRR5241253","SRR5241252","SRR5241251","SRR5241250","SRR5241247","SRR5241244","SRR5241243","SRR5241241","SRR5241240","SRR5241239","SRR5241238","SRR5241236","SRR5241235","SRR5241234","SRR5241233","SRR5241232","SRR5241231","SRR5241227","SRR5241226","SRR5241225","SRR5241224","SRR5241223","SRR5241222","SRR5241221","SRR5241218","SRR5241216","SRR5241215","SRR5241214","SRR5241211","SRR5241210","SRR5241209","SRR5241207","SRR5241205","SRR5241219"],
+  "chip_seq.title": "Help tagging",
+  "chip_seq.sort_threads": 1,
+  "chip_seq.destination": "/data/samples/EMBED/HELP/narrow",
+  "chip_seq.reference": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "chip_seq.copy_cleaned": true,
+  "chip_seq.copy_extracted": true,
+  "chip_seq.extract_threads": 12,
+  "chip_seq.align_threads": 1,
+  "chip_seq.skip_technical": true,
+  "chip_seq.aspera_download": true,
+  "chip_seq.max_memory_gb": 13,
+  "chip_seq.sequence_aligner": "minimap2",
+  "chip_seq.format": "BAM",
+  "chip_seq.broad": false
+}
