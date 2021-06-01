@@ -1,0 +1,17 @@
+{
+  "chip_seq.destination": "/data/samples/EMBED/MEDIP/GSE54370",
+  "chip_seq.treatments": ["SRR1142068","SRR1142066","SRR1142063","SRR1142061","SRR1142059","SRR1142058","SRR1142055","SRR1142053","SRR1142052","SRR1142050","SRR1142047","SRR1142046","SRR1142044","SRR1142041","SRR1142040","SRR1142037","SRR1142035","SRR1142033","SRR1142032","SRR1142030","SRR1142027","SRR1142026","SRR1142023"],
+  "chip_seq.controls": ["SRR1142067","SRR1142065","SRR1142064","SRR1142062","SRR1142060","SRR1142057","SRR1142056","SRR1142054","SRR1142051","SRR1142049","SRR1142048","SRR1142045","SRR1142043","SRR1142042","SRR1142039","SRR1142038","SRR1142036","SRR1142034","SRR1142031","SRR1142029","SRR1142028","SRR1142025","SRR1142024"],
+  "chip_seq.title": "medip_twins",
+  "chip_seq.sort_threads": 1,
+  "chip_seq.reference": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "chip_seq.copy_cleaned": true,
+  "chip_seq.copy_extracted": true,
+  "chip_seq.extract_threads": 12,
+  "chip_seq.align_threads": 1,
+  "chip_seq.skip_technical": true,
+  "chip_seq.aspera_download": true,
+  "chip_seq.max_memory_gb": 13,
+  "chip_seq.sequence_aligner": "minimap2",
+  "chip_seq.format": "BAM"
+}
