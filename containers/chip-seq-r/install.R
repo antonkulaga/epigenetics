@@ -1,7 +1,7 @@
 general <- c("tidyverse")
 BiocManager::install(general)
 
-chip_seq <- c("csaw", "ChIPseeker", "clusterProfiler", "DiffBind", "edgeR", "DESeq2", "ChIPQC")
+chip_seq <- c("csaw", "ChIPseeker", "clusterProfiler", "DiffBind", "edgeR", "DESeq2", "ChIPQC", "DiffBind")
 BiocManager::install(chip_seq)
 
 medips <- c("MEDIPS", "RUVSeq", "DSS")

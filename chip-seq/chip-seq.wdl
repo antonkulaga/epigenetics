@@ -27,6 +27,7 @@ workflow chip_seq {
         String sequence_aligner = "minimap2"
         Boolean markdup = false
         Int compression = 9
+        Boolean readgroup = false
     }
 
     call runs_aligner.align_runs as align_controls{
@@ -49,7 +50,8 @@ workflow chip_seq {
             sequence_aligner = sequence_aligner,
             markdup = markdup,
             compression = compression,
-            deep_folder_structure =  deep_folder_structure
+            deep_folder_structure =  deep_folder_structure,
+            readgroup = readgroup
     }
 
 

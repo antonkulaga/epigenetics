@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t quay.io/comp-bio-aging/medip .
+docker build -t quay.io/comp-bio-aging/chip-seq-r .
