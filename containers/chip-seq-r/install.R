@@ -1,4 +1,4 @@
-general <- c("tidyverse")
+general <- c("tidyverse", "igraph", "enrichplot")
 BiocManager::install(general)
 
 chip_seq <- c("csaw", "ChIPseeker", "clusterProfiler", "DiffBind", "edgeR", "DESeq2", "ChIPQC", "DiffBind")

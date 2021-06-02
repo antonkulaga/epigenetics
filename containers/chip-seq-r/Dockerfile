@@ -1,5 +1,4 @@
 FROM quay.io/comp-bio-aging/rstudio:master
-RUN apt-get install gfortran
 ADD install.R /tmp/
 RUN R -f /tmp/install.R
 ADD src /home/rstudio/
