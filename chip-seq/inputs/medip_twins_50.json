@@ -1,0 +1,17 @@
+{
+  "chip_seq.destination": "/data/samples/EMBED/MEDIP/GSE54222",
+  "chip_seq.treatments": ["SRR1135111","SRR1135109","SRR1135106","SRR1135104","SRR1135103","SRR1135101","SRR1135099","SRR1135097","SRR1135095","SRR1135093","SRR1135090","SRR1135088","SRR1135087","SRR1135084","SRR1135082","SRR1135081","SRR1135079","SRR1135076","SRR1135074","SRR1135072","SRR1135071","SRR1135069","SRR1135067","SRR1135065","SRR1135062","SRR1135060","SRR1135058"],
+  "chip_seq.controls": ["SRR1135110","SRR1135108","SRR1135107","SRR1135105","SRR1135102","SRR1135100","SRR1135098","SRR1135096","SRR1135094","SRR1135092","SRR1135091","SRR1135089","SRR1135086","SRR1135085","SRR1135083","SRR1135080","SRR1135078","SRR1135077","SRR1135075","SRR1135073","SRR1135070","SRR1135068","SRR1135066","SRR1135064","SRR1135063","SRR1135061","SRR1135059"],
+  "chip_seq.title" : "medip_twins_50",
+  "chip_seq.sort_threads": 1,
+  "chip_seq.reference": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "chip_seq.copy_cleaned": true,
+  "chip_seq.copy_extracted": true,
+  "chip_seq.extract_threads": 12,
+  "chip_seq.align_threads": 1,
+  "chip_seq.skip_technical": true,
+  "chip_seq.aspera_download": true,
+  "chip_seq.max_memory_gb": 13,
+  "chip_seq.sequence_aligner": "minimap2",
+  "chip_seq.format": "BAM"
+}
