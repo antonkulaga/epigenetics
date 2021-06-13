@@ -75,7 +75,8 @@ workflow chip_seq {
             sequence_aligner = sequence_aligner,
             markdup = markdup,
             compression = compression,
-            deep_folder_structure = deep_folder_structure
+            deep_folder_structure = deep_folder_structure,
+            readgroup = readgroup
     }
 
     scatter(control in align_controls.out){
@@ -121,3 +122,25 @@ workflow chip_seq {
     }
 }
 
+
+task annotate_peaks {
+    input {
+        File reference
+        File gtf
+        File peak
+        String name
+
+    }
+
+    command {
+        annotatePeaks.pl ~{peak} ~{reference} -gtf ~{gtf} > ~{name}.bed
+    }
+
+    runtime {
+        docker: "quay.io/biocontainers/homer:4.11--pl5262h7d875b9_4"
+    }
+
+    output {
+        File out = name + ".bed"
+    }
+}
