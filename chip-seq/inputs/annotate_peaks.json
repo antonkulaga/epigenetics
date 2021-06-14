@@ -1,0 +1,6 @@
+{
+  "peaks_annotation.peaks": ["/data/samples/EMBED/HELP/GSE94729/broad_peaks/Help_tagging_peaks.broadPeak", "/data/samples/EMBED/HELP/GSE94729/narrow_peaks/Help_tagging_peaks.narrowPeak"],
+  "peaks_annotation.destination": "/data/samples/EMBED/HELP/GSE94729/annotations/",
+  "peaks_annotation.reference": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "peaks_annotation.gtf": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.103.gtf"
+}

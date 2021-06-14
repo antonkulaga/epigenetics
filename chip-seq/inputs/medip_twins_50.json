@@ -5,6 +5,7 @@
   "chip_seq.title" : "medip_twins_50",
   "chip_seq.sort_threads": 1,
   "chip_seq.reference": "/data/ensembl/103/species/Homo_sapiens/Homo_sapiens.GRCh38.dna.primary_assembly.fa",
+  "chip_seq.reference_index" : "/data/indexes/bwa-mem2/Homo_sapiens",
   "chip_seq.copy_cleaned": true,
   "chip_seq.copy_extracted": true,
   "chip_seq.extract_threads": 12,
@@ -12,7 +13,7 @@
   "chip_seq.skip_technical": true,
   "chip_seq.aspera_download": true,
   "chip_seq.max_memory_gb": 13,
-  "chip_seq.sequence_aligner": "minimap2",
+  "chip_seq.sequence_aligner": "bwa_mem2",
   "chip_seq.format": "BAM",
   "chip_seq.readgroup": false
 }

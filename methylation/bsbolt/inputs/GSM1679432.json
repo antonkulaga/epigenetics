@@ -1,0 +1,7 @@
+{
+  "bsbolt_map_run.destination": "/data/epigenetics-lab/WGBS/GSE68713/GSM1679432",
+  "bsbolt_map_run.name": "vDG_WT_1 (eRRBS)",
+  "bsbolt_map_run.read_group": "GSM1679432",
+  "bsbolt_map_run.reads": [ "],
+  "bsbolt_map_run.index": "/data/indexes/bsbolt/ensembl_103/Homo_sapiens"
+}
