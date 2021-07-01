@@ -6,4 +6,3 @@ USER root
 RUN chmod -R 777 /var/run/
 RUN chmod -R 777 /usr/local/lib/R
 RUN chmod -R 777 /home/rstudio/
-USER rstudio
